@@ -1,0 +1,122 @@
+[
+  {
+    "crash_count": 131,
+    "time_period": "00:00:00-01:00:00",
+    "time_id": 1
+  },
+  {
+    "crash_count": 111,
+    "time_period": "01:00:00-02:00:00",
+    "time_id": 2
+  },
+  {
+    "crash_count": 85,
+    "time_period": "02:00:00-03:00:00",
+    "time_id": 3
+  },
+  {
+    "crash_count": 83,
+    "time_period": "03:00:00-04:00:00",
+    "time_id": 4
+  },
+  {
+    "crash_count": 47,
+    "time_period": "04:00:00-05:00:00",
+    "time_id": 5
+  },
+  {
+    "crash_count": 51,
+    "time_period": "05:00:00-06:00:00",
+    "time_id": 6
+  },
+  {
+    "crash_count": 132,
+    "time_period": "06:00:00-07:00:00",
+    "time_id": 7
+  },
+  {
+    "crash_count": 207,
+    "time_period": "07:00:00-08:00:00",
+    "time_id": 8
+  },
+  {
+    "crash_count": 384,
+    "time_period": "08:00:00-09:00:00",
+    "time_id": 9
+  },
+  {
+    "crash_count": 344,
+    "time_period": "09:00:00-10:00:00",
+    "time_id": 10
+  },
+  {
+    "crash_count": 294,
+    "time_period": "10:00:00-11:00:00",
+    "time_id": 11
+  },
+  {
+    "crash_count": 347,
+    "time_period": "11:00:00-12:00:00",
+    "time_id": 12
+  },
+  {
+    "crash_count": 367,
+    "time_period": "12:00:00-13:00:00",
+    "time_id": 13
+  },
+  {
+    "crash_count": 324,
+    "time_period": "13:00:00-14:00:00",
+    "time_id": 14
+  },
+  {
+    "crash_count": 306,
+    "time_period": "14:00:00-15:00:00",
+    "time_id": 15
+  },
+  {
+    "crash_count": 534,
+    "time_period": "15:00:00-16:00:00",
+    "time_id": 16
+  },
+  {
+    "crash_count": 444,
+    "time_period": "16:00:00-17:00:00",
+    "time_id": 17
+  },
+  {
+    "crash_count": 452,
+    "time_period": "17:00:00-18:00:00",
+    "time_id": 18
+  },
+  {
+    "crash_count": 440,
+    "time_period": "18:00:00-19:00:00",
+    "time_id": 19
+  },
+  {
+    "crash_count": 285,
+    "time_period": "19:00:00-20:00:00",
+    "time_id": 20
+  },
+  {
+    "crash_count": 246,
+    "time_period": "20:00:00-21:00:00",
+    "time_id": 21
+  },
+  {
+    "crash_count": 178,
+    "time_period": "21:00:00-22:00:00",
+    "time_id": 22
+  },
+  {
+    "crash_count": 158,
+    "time_period": "22:00:00-23:00:00",
+    "time_id": 23
+  },
+  {
+    "crash_count": 132,
+    "time_period": "23:00:00-24:00:00",
+    "time_id": 24
+  }
+]
