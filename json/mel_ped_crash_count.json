@@ -2,121 +2,121 @@
   {
     "crash_count": 22,
     "time_period": "00:00:00-01:00:00",
-    "time_id": 1
+    "time_id": 0
   },
   {
     "crash_count": 17,
     "time_period": "01:00:00-02:00:00",
-    "time_id": 2
+    "time_id": 1
   },
   {
     "crash_count": 26,
     "time_period": "02:00:00-03:00:00",
-    "time_id": 3
+    "time_id": 2
   },
   {
     "crash_count": 32,
     "time_period": "03:00:00-04:00:00",
-    "time_id": 4
+    "time_id": 3
   },
   {
     "crash_count": 13,
     "time_period": "04:00:00-05:00:00",
-    "time_id": 5
+    "time_id": 4
   },
   {
     "crash_count": 9,
     "time_period": "05:00:00-06:00:00",
-    "time_id": 6
+    "time_id": 5
   },
   {
     "crash_count": 18,
     "time_period": "06:00:00-07:00:00",
-    "time_id": 7
+    "time_id": 6
   },
   {
     "crash_count": 30,
     "time_period": "07:00:00-08:00:00",
-    "time_id": 8
+    "time_id": 7
   },
   {
     "crash_count": 36,
     "time_period": "08:00:00-09:00:00",
-    "time_id": 9
+    "time_id": 8
   },
   {
     "crash_count": 61,
     "time_period": "09:00:00-10:00:00",
-    "time_id": 10
+    "time_id": 9
   },
   {
     "crash_count": 45,
     "time_period": "10:00:00-11:00:00",
-    "time_id": 11
+    "time_id": 10
   },
   {
     "crash_count": 40,
     "time_period": "11:00:00-12:00:00",
-    "time_id": 12
+    "time_id": 11
   },
   {
     "crash_count": 68,
     "time_period": "12:00:00-13:00:00",
-    "time_id": 13
+    "time_id": 12
   },
   {
     "crash_count": 49,
     "time_period": "13:00:00-14:00:00",
-    "time_id": 14
+    "time_id": 13
   },
   {
     "crash_count": 47,
     "time_period": "14:00:00-15:00:00",
-    "time_id": 15
+    "time_id": 14
   },
   {
     "crash_count": 58,
     "time_period": "15:00:00-16:00:00",
-    "time_id": 16
+    "time_id": 15
   },
   {
     "crash_count": 51,
     "time_period": "16:00:00-17:00:00",
-    "time_id": 17
+    "time_id": 16
   },
   {
     "crash_count": 78,
     "time_period": "17:00:00-18:00:00",
-    "time_id": 18
+    "time_id": 17
   },
   {
     "crash_count": 59,
     "time_period": "18:00:00-19:00:00",
-    "time_id": 19
+    "time_id": 18
   },
   {
     "crash_count": 35,
     "time_period": "19:00:00-20:00:00",
-    "time_id": 20
+    "time_id": 19
   },
   {
     "crash_count": 37,
     "time_period": "20:00:00-21:00:00",
-    "time_id": 21
+    "time_id": 20
   },
   {
     "crash_count": 28,
     "time_period": "21:00:00-22:00:00",
-    "time_id": 22
+    "time_id": 21
   },
   {
     "crash_count": 31,
     "time_period": "22:00:00-23:00:00",
-    "time_id": 23
+    "time_id": 22
   },
   {
     "crash_count": 14,
     "time_period": "23:00:00-24:00:00",
-    "time_id": 24
+    "time_id": 23
   }
 ]

@@ -12,11 +12,11 @@
 <body>
    <div id="wrapper">
        <div class=container style="display: inline-flex;">
-           <div class="left-side" style="width: 600px; height: 400px; margin: 0 auto">
-                <div id="bar-chart" style="width: 600px; height: 400px; margin: 0 auto"></div>
+           <div class="left-side" style="width: 500px; height: 400px; margin: 0 auto; margin-left: 2%">
+                <div id="bar-chart" style="width: 500px; height: 400px; margin: 0 auto"></div>
            </div>
 
-           <div class="right-side" style="width: 600px; height: 400px; margin: 0 auto">
+           <div class="right-side" style="width: 600px; height: 400px; margin: 0 auto; margin-left: 5%">
                <div id="map" style="width: 600px; height: 400px"></div>
            </div>
        </div>
@@ -45,7 +45,7 @@ $(function () {
         xAxis: {
             type: 'category',
             labels: {
-                rotation: -60,
+                rotation: 0,
                 style: {
                     fontSize: '12px',
                     fontFamily: 'Verdana, sans-serif'
@@ -62,7 +62,11 @@ $(function () {
             enabled: false
         },
         tooltip: {
-            pointFormat: '<strong>Pedestrian Crash Count: {point.y} </strong>'
+            formatter: function () {
+                console.log(this);
+                return '<strong>'+this.point.time_period+'<br/></strong><strong>Pedestrian Crash Count: '+this.y+'</strong>';
+            }
+//            pointFormat: '<strong>Pedestrian Crash Count: {point.y} </strong>'
         },
         series: [{
             name: 'Pedestrian crash count',
@@ -76,7 +80,7 @@ $(function () {
                 format: '{point.y}',
                 y: 22, // 5 pixels down from the top
                 style: {
-                    fontSize: '12px',
+                    fontSize: '10px',
                     fontFamily: 'Verdana, sans-serif'
                 }
             }
@@ -90,7 +94,8 @@ $(function () {
                         mouseOver: function () {
                             $(this.series.chart.xAxis[0].labelGroup.element.childNodes[this.x]).css({
                                     'fill': '#7cb5ec',
-                                    'font-weight': 'bold'
+                                    'font-weight': 'bold',
+                                    'font-size': '14px'
                             });
                             //this.x start from 0-23 (24 hours)
                            // console.log(this.x);
@@ -100,7 +105,8 @@ $(function () {
                         mouseOut: function () {
                             $(this.series.chart.xAxis[0].labelGroup.element.childNodes[this.x]).css({
                                     'fill': '#606060',
-                                    'font-weight': 'normal'
+                                    'font-weight': 'normal',
+                                    'font-size': '12px'
                             });
                             //this.x = 17
                             //console.log("mouseOut");
@@ -113,9 +119,9 @@ $(function () {
     };
     $.getJSON('json/mel_ped_crash_count.json', function(data) {
         for (i = 0; i < data.length; i++){
-            options.series[0].data.push([data[i].time_period, data[i].crash_count]);
+            options.series[0].data.push({x:data[i].time_id, y:data[i].crash_count, time_period:data[i].time_period});
         }
-
+        console.log(options.series[0].data);
         $('#bar-chart').highcharts(options);
     });
 

@@ -51,7 +51,7 @@ function createLayer(geojson,className)
                 fillColor: "#5964ff",
                 color: "#5964ff",
                 weight: 1,
-                opacity: 1,
+                opacity: 0.5,
                 fillOpacity: 0.5,
                 className: className
             });
