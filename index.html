@@ -11,12 +11,12 @@
 </head>
 <body>
    <div id="wrapper">
-       <div class=container>
-           <div class="left-side">
+       <div class=container style="display: inline-flex;">
+           <div class="left-side" style="width: 600px; height: 400px; margin: 0 auto">
                 <div id="bar-chart" style="width: 600px; height: 400px; margin: 0 auto"></div>
            </div>
 
-           <div class="right-side">
+           <div class="right-side" style="width: 600px; height: 400px; margin: 0 auto">
                <div id="map" style="width: 600px; height: 400px"></div>
            </div>
        </div>
@@ -24,6 +24,8 @@
 
 
    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+   <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+   <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
    <script src="js/create_map.js"></script>
 <script>
 $(function () {
@@ -101,7 +103,8 @@ $(function () {
                                     'font-weight': 'normal'
                             });
                             //this.x = 17
-                            console.log("mouseOut");
+                            //console.log("mouseOut");
+                            //createAllLayers(layerArray);
                         }
                     }
                 }
@@ -116,6 +119,9 @@ $(function () {
         $('#bar-chart').highcharts(options);
     });
 
+//    $( "#wrapper" ).mouseout(function() {
+//      createAllLayers(layerArray);
+//    });
 });
 </script>
 </body>
