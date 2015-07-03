@@ -13,105 +13,22 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 
 <script>
-    var firstHour = {
+    var a = {
         "type": "FeatureCollection",
         "features": [
-            {
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
-                        -104.9998241,
-                        39.7471494
-                    ]
-                },
-                "type": "Feature",
-                "properties": {
-                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
-                },
-                "id": 51
-            },
-            {
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
-                        -104.9963919,
-                        39.7444271
-                    ]
-                },
-                "type": "Feature",
-                "properties": {
-                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
-                },
-                "id": 54
-            },
-            {
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
-                        -104.9960754,
-                        39.7498956
-                    ]
-                },
-                "type": "Feature",
-                "properties": {
-                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
-                },
-                "id": 55
-            }
-        ]
+            { "geometry": { "type": "Point", "coordinates": [ 144.9654802, -37.8210145 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9878602, -37.83063385 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9872777, -37.83476246 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9670035, -37.81648605 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9523801, -37.80923968 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.952356, -37.81513771 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9548414, -37.81442689 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9705788, -37.81208776 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9903816, -37.815332 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9206355, -37.82081277 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9568969, -37.8015526 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9514505, -37.81316786 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.967228, -37.81751947 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9627074, -37.81883514 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9691623, -37.8305266 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9860685, -37.84065705 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9597176, -37.80837786 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9396795, -37.81407335 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9563685, -37.82385919 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9694918, -37.82130938 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9896046, -37.8201832 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9554189, -37.81647791 ] }, "type": "Feature" }  ]
     };
 
-    var secondHour = {
+    var b = {
         "type": "FeatureCollection",
         "features": [
-            {
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
-                        -104.9983545,
-                        39.7502838
-                    ]
-                },
-                "type": "Feature",
-                "properties": {
-                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
-                },
-                "id": 52
-            },
-            {
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
-                        -104.9913392,
-                        39.7432392
-                    ]
-                },
-                "type": "Feature",
-                "properties": {
-                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
-                },
-                "id": 58
-            },
-            {
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
-                        -104.9788452,
-                        39.6933755
-                    ]
-                },
-                "type": "Feature",
-                "properties": {
-                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
-                },
-                "id": 74
-            }
+            { "geometry": { "type": "Point", "coordinates": [ 144.9571213, -37.8193911 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9674529, -37.817454 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9439933, -37.80030168 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.952356, -37.81513771 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.955293, -37.81540488 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9548414, -37.81442689 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.967816, -37.82094876 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9613738, -37.81031769 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9732368, -37.80772482 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9677514, -37.81068731 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9477454, -37.80760414 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9637756, -37.82283497 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9564678, -37.82407323 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9580306, -37.82147824 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9497094, -37.79540081 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.955295, -37.81651333 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.967765, -37.81736317 ] }, "type": "Feature" }
         ]
     };
 </script>
 
 <script>
-    var map = L.map('map').setView([39.74739, -105], 13);
+    var map = L.map('map').setView([-37.831180, 145.009731], 13);
 
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
         maxZoom: 18,
@@ -123,7 +40,7 @@
 
 
 
-    var firstLayer = L.geoJson(firstHour, {
+    var firstLayer = L.geoJson(a, {
 
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, {
@@ -138,7 +55,7 @@
         }
     }).addTo(map);
 
-    var secondLayer = L.geoJson(secondHour, {
+    var secondLayer = L.geoJson(b, {
 
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, {
