@@ -12,7 +12,7 @@
    <div id="wrapper">
        <div class=container>
            <div class="left-side">
-                <div id="bar-chart" style="width: 700px; height: 400px; margin: 0 auto"></div>
+                <div id="bar-chart" style="width: 600px; height: 400px; margin: 0 auto"></div>
            </div>
 
            <div class="right-side">
@@ -26,6 +26,9 @@
 <script>
 $(function () {
     var options = {
+        credits: {
+            enabled: false
+        },
         chart: {
             type: 'column'
         },
@@ -33,14 +36,14 @@ $(function () {
             text: 'Melbourne Pedestrian Crash Count 2009-2013'
         },
         subtitle: {
-            text: 'Source: <a href="https://data.melbourne.vic.gov.au/ ">City of Melbourne</a>'
+            text: 'Source: <a href="https://data.melbourne.vic.gov.au/ ">City of Melbourne open data</a>'
         },
         xAxis: {
             type: 'category',
             labels: {
                 rotation: -60,
                 style: {
-                    fontSize: '13px',
+                    fontSize: '12px',
                     fontFamily: 'Verdana, sans-serif'
                 }
             }
@@ -55,20 +58,21 @@ $(function () {
             enabled: false
         },
         tooltip: {
-            pointFormat: 'Pedestrian Crash Count: <b>{point.y} </b>'
+            pointFormat: '<strong>Pedestrian Crash Count: {point.y} </strong>'
         },
         series: [{
             name: 'Pedestrian crash count',
             data: [],
             dataLabels: {
+                allowOverlap: true,
                 enabled: true,
-                rotation: -90,
+                rotation: 0,
                 color: '#FFFFFF',
-                align: 'right',
+                align: 'center',
                 format: '{point.y}',
-                y: 5, // 5 pixels down from the top
+                y: 22, // 5 pixels down from the top
                 style: {
-                    fontSize: '13px',
+                    fontSize: '12px',
                     fontFamily: 'Verdana, sans-serif'
                 }
             }
@@ -80,13 +84,21 @@ $(function () {
                 point: {
                     events: {
                         mouseOver: function () {
-                            //console.log(this.x); this.x start from 0-23 (24 hours)
+                            $(this.series.chart.xAxis[0].labelGroup.element.childNodes[this.x]).css({
+                                    'fill': '#7cb5ec',
+                                    'font-weight': 'bold'
+                            });
+                            //this.x start from 0-23 (24 hours)
+                            console.log(this.x);
+                        },
+                        mouseOut: function () {
+                            $(this.series.chart.xAxis[0].labelGroup.element.childNodes[this.x]).css({
+                                    'fill': '#606060',
+                                    'font-weight': 'normal'
+                            });
+                            //this.x = 17
+                            console.log("mouseOut");
                         }
-                    }
-                },
-                events: {
-                    mouseOut: function () {
-                        //this.x = 17
                     }
                 }
             }
