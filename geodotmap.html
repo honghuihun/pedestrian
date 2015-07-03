@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+</head>
+<body>
+<div id="map" style="width: 600px; height: 400px"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+
+<script>
+    var firstHour = {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -104.9998241,
+                        39.7471494
+                    ]
+                },
+                "type": "Feature",
+                "properties": {
+                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+                },
+                "id": 51
+            },
+            {
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -104.9963919,
+                        39.7444271
+                    ]
+                },
+                "type": "Feature",
+                "properties": {
+                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+                },
+                "id": 54
+            },
+            {
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -104.9960754,
+                        39.7498956
+                    ]
+                },
+                "type": "Feature",
+                "properties": {
+                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+                },
+                "id": 55
+            }
+        ]
+    };
+
+    var secondHour = {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -104.9983545,
+                        39.7502838
+                    ]
+                },
+                "type": "Feature",
+                "properties": {
+                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+                },
+                "id": 52
+            },
+            {
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -104.9913392,
+                        39.7432392
+                    ]
+                },
+                "type": "Feature",
+                "properties": {
+                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+                },
+                "id": 58
+            },
+            {
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -104.9788452,
+                        39.6933755
+                    ]
+                },
+                "type": "Feature",
+                "properties": {
+                    "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+                },
+                "id": 74
+            }
+        ]
+    };
+</script>
+
+<script>
+    var map = L.map('map').setView([39.74739, -105], 13);
+
+    L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        id: 'examples.map-20v6611k'
+    }).addTo(map);
+
+
+
+    var firstLayer = L.geoJson(firstHour, {
+
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, {
+                radius: 8,
+                fillColor: "#ff7800",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8,
+                className:"firstHour"
+            });
+        }
+    }).addTo(map);
+
+    var secondLayer = L.geoJson(secondHour, {
+
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, {
+                radius: 8,
+                fillColor: "#ff7800",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8,
+                className:"secondHour"
+            });
+        }
+    }).addTo(map);
+
+
+
+
+</script>
+
+
+<button id="first">first</button>
+<button id="second">second</button>
+
+
+<script>
+   $('body').on('mouseover','#first',function()
+   {
+      $('.secondHour').hide();
+      $('.firstHour').show();
+   });
+
+   $('body').on('mouseover','#second',function()
+   {
+       $('.secondHour').show();
+       $('.firstHour').hide();
+   });
+</script>
+
+</body>
+</html>
