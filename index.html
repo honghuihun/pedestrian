@@ -6,6 +6,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="js/crash_geojson.js"></script>
     <title></title>
 </head>
 <body>
@@ -16,13 +17,14 @@
            </div>
 
            <div class="right-side">
-
+               <div id="map" style="width: 600px; height: 400px"></div>
            </div>
        </div>
    </div>
 
 
    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+   <script src="js/create_map.js"></script>
 <script>
 $(function () {
     var options = {
@@ -89,7 +91,9 @@ $(function () {
                                     'font-weight': 'bold'
                             });
                             //this.x start from 0-23 (24 hours)
-                            console.log(this.x);
+                           // console.log(this.x);
+
+                            showCurrentCrash(layerArray,this.x);
                         },
                         mouseOut: function () {
                             $(this.series.chart.xAxis[0].labelGroup.element.childNodes[this.x]).css({

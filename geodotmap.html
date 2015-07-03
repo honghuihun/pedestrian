@@ -11,21 +11,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<script src="js/crash_geojson.js"></script>
 
-<script>
-    var a = {
-        "type": "FeatureCollection",
-        "features": [
-            { "geometry": { "type": "Point", "coordinates": [ 144.9654802, -37.8210145 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9878602, -37.83063385 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9872777, -37.83476246 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9670035, -37.81648605 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9523801, -37.80923968 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.952356, -37.81513771 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9548414, -37.81442689 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9705788, -37.81208776 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9903816, -37.815332 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9206355, -37.82081277 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9568969, -37.8015526 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9514505, -37.81316786 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.967228, -37.81751947 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9627074, -37.81883514 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9691623, -37.8305266 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9860685, -37.84065705 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9597176, -37.80837786 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9396795, -37.81407335 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9563685, -37.82385919 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9694918, -37.82130938 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9896046, -37.8201832 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9554189, -37.81647791 ] }, "type": "Feature" }  ]
-    };
 
-    var b = {
-        "type": "FeatureCollection",
-        "features": [
-            { "geometry": { "type": "Point", "coordinates": [ 144.9571213, -37.8193911 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9674529, -37.817454 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9439933, -37.80030168 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.952356, -37.81513771 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.955293, -37.81540488 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9548414, -37.81442689 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.967816, -37.82094876 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9613738, -37.81031769 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9732368, -37.80772482 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9677514, -37.81068731 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9477454, -37.80760414 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9637756, -37.82283497 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9564678, -37.82407323 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9580306, -37.82147824 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.9497094, -37.79540081 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.955295, -37.81651333 ] }, "type": "Feature" }, { "geometry": { "type": "Point", "coordinates": [ 144.967765, -37.81736317 ] }, "type": "Feature" }
-        ]
-    };
-</script>
 
 <script>
     var map = L.map('map').setView([-37.831180, 145.009731], 13);
@@ -40,57 +28,87 @@
 
 
 
-    var firstLayer = L.geoJson(a, {
+    var layerArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x'];
+    var indexTable = {'a':a,'b':b,'c':c,'d':d,'e':e,'f':f,'g':g,'h':h,'i':i,'j':j,'k':k,'l':l,'m':m,'n':n,'o':o,'p':p,'q':q,'r':r,'s':s,'t':t,'u':u, 'v':v,'w':w,'x':x};
 
-        pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, {
-                radius: 8,
-                fillColor: "#ff7800",
-                color: "#000",
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 0.8,
-                className:"firstHour"
-            });
+
+    createAllLayers(layerArray);
+
+    showCurrentCrash(layerArray,0);
+
+    function showCurrentCrash(layerArray,index)
+    {
+        for(var i=0; i<layerArray.length;i++)
+        {
+            if(index == i)
+            {
+                $('.'+layerArray[i]).show();
+            }
+            else
+            {
+                $('.'+layerArray[i]).hide();
+            }
+
         }
-    }).addTo(map);
+    }
 
-    var secondLayer = L.geoJson(b, {
 
-        pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, {
-                radius: 8,
-                fillColor: "#ff7800",
-                color: "#000",
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 0.8,
-                className:"secondHour"
-            });
+    function createLayer(geojson,className)
+    {
+
+      return   L.geoJson(geojson, {
+
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                    radius: 8,
+                    fillColor: "#ff7800",
+                    color: "#000",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.8,
+                    className: className
+                });
+            }
+        }).addTo(map);
+    }
+
+
+    function createAllLayers(layerArray)
+    {
+        for(var i= 0; i < layerArray.length; i++)
+        {
+            createLayer(indexTable[layerArray[i]],layerArray[i]);
         }
-    }).addTo(map);
 
-
-
-
+    }
 </script>
 
 
-<button id="first">first</button>
-<button id="second">second</button>
+<button id="a">first</button>
+<button id="b">second</button>
+<button id="c">third</button>
 
 
 <script>
-   $('body').on('mouseover','#first',function()
+   $('body').on('mouseover','#a',function()
    {
-      $('.secondHour').hide();
-      $('.firstHour').show();
+      $('.a').show();
+      $('.b').hide();
+      $('.c').hide();
    });
 
-   $('body').on('mouseover','#second',function()
+   $('body').on('mouseover','#b',function()
    {
-       $('.secondHour').show();
-       $('.firstHour').hide();
+       $('.a').hide();
+       $('.b').show();
+       $('.c').hide();
+   });
+
+   $('body').on('mouseover','#c',function()
+   {
+       $('.a').hide();
+       $('.b').hide();
+       $('.c').show();
    });
 </script>
 
