@@ -53,6 +53,7 @@
    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+   <script src="js/buffer.js"></script>
    <script src="js/create_map.js"></script>
 <script>
 $(function () {
@@ -128,6 +129,181 @@ $(function () {
                            // console.log(this.x);
 
                             showCurrentCrash(layerArray,this.x);
+
+                            if(this.x == 0)
+                            {
+                                map.addLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);map.removeLayer(buffer3);
+                                map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 1)
+                            {
+                                map.addLayer(buffer1);map.removeLayer(buffer0);map.removeLayer(buffer2);map.removeLayer(buffer3);
+                                map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x ==2)
+                            {
+                                map.addLayer(buffer2);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer3);
+                                map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 3)
+                            {
+                                map.addLayer(buffer3);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x ==4)
+                            {
+                                map.addLayer(buffer4);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 5)
+                            {
+                                map.addLayer(buffer5);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 6)
+                            {
+                                map.addLayer(buffer6);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 7)
+                            {
+                                map.addLayer(buffer7);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 8)
+                            {
+                                map.addLayer(buffer8);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 9)
+                            {
+                                map.addLayer(buffer9);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 10)
+                            {
+                                map.addLayer(buffer10);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 11)
+                            {
+                                map.addLayer(buffer11);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 12)
+                            {
+                                map.addLayer(buffer12);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 13)
+                            {
+                                map.addLayer(buffer13);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer14);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 14)
+                            {
+                                map.addLayer(buffer14);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer15);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 15)
+                            {
+                                map.addLayer(buffer15);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer16);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 16)
+                            {
+                                map.addLayer(buffer16);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);
+                                map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 17)
+                            {
+                                map.addLayer(buffer17);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);
+                                map.removeLayer(buffer16);map.removeLayer(buffer18);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 18)
+                            {
+                                map.addLayer(buffer18);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);
+                                map.removeLayer(buffer16);map.removeLayer(buffer17);map.removeLayer(buffer19);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 19)
+                            {
+                                map.addLayer(buffer19);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);
+                                map.removeLayer(buffer16);map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer20);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 20)
+                            {
+                                map.addLayer(buffer20);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);
+                                map.removeLayer(buffer16);map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);
+                                map.removeLayer(buffer21);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 21)
+                            {
+                                map.addLayer(buffer21);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);
+                                map.removeLayer(buffer16);map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);
+                                map.removeLayer(buffer20);map.removeLayer(buffer22);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 22)
+                            {
+                                map.addLayer(buffer22);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);
+                                map.removeLayer(buffer16);map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);
+                                map.removeLayer(buffer20);map.removeLayer(buffer21);map.removeLayer(buffer23);
+                            }
+                            else if(this.x == 23)
+                            {
+                                map.addLayer(buffer23);map.removeLayer(buffer0);map.removeLayer(buffer1);map.removeLayer(buffer2);
+                                map.removeLayer(buffer3);map.removeLayer(buffer4);map.removeLayer(buffer5);map.removeLayer(buffer6);map.removeLayer(buffer7);map.removeLayer(buffer8);map.removeLayer(buffer9);map.removeLayer(buffer10);map.removeLayer(buffer11);map.removeLayer(buffer12);map.removeLayer(buffer13);map.removeLayer(buffer14);map.removeLayer(buffer15);
+                                map.removeLayer(buffer16);map.removeLayer(buffer17);map.removeLayer(buffer18);map.removeLayer(buffer19);
+                                map.removeLayer(buffer20);map.removeLayer(buffer21);map.removeLayer(buffer22);
+                            }
+
+
+
+
+
+                            // showCurrentColor(layerArray,colorTable,this.x,map);
                         },
                         mouseOut: function () {
                             $(this.series.chart.xAxis[0].labelGroup.element.childNodes[this.x]).css({
@@ -148,7 +324,6 @@ $(function () {
         for (i = 0; i < data.length; i++){
             options.series[0].data.push({x:data[i].time_id, y:data[i].crash_count, time_period:data[i].time_period});
         }
-        console.log(options.series[0].data);
         $('#bar-chart').highcharts(options);
     });
 
