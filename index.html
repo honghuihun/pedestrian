@@ -9,14 +9,41 @@
     <script src="js/crash_geojson.js"></script>
     <title></title>
 </head>
+<style>
+    .story-header {
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 0;
+        position: relative;
+        font-family: Verdana, sans-serif;
+        text-align:center;
+    }
+    .interactive-headline{
+        margin-bottom: 50px !important;
+        font: 300 38px/1.15 nyt-franklin, Arial, sans-serif !important;
+        font-family: nyt-franklin, Arial, sans-serif;
+        font-size: 38px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 300;
+        font-stretch: normal;
+        line-height: 1.15;
+    }
+</style>
 <body>
+<header class="story-header interactive-header">
+    <div>
+        <h1 class="interactive-headline">Mapping Pedestrian Activities & Safety in City of Melbourne</h1>
+    </div>
+</header>
+
    <div id="wrapper">
-       <div class=container style="display: inline-flex;">
-           <div class="left-side" style="width: 500px; height: 400px; margin: 0 auto; margin-left: 2%">
+       <div class=container style="display: flex;">
+           <div class="left-side" style="width: 500px; height: 400px; margin: 0 auto;">
                 <div id="bar-chart" style="width: 500px; height: 250px; margin: 0 auto"></div>
            </div>
 
-           <div class="right-side" style="width: 600px; height: 400px; margin: 0 auto; margin-left: 5%">
+           <div class="right-side" style="width: 600px; height: 400px; margin: 0 auto;">
                <div id="map" style="width: 600px; height: 400px"></div>
            </div>
        </div>
@@ -40,7 +67,7 @@ $(function () {
             text: 'Melbourne Pedestrian Crash Count 2009-2013'
         },
         subtitle: {
-            text: 'Source: <a href="https://data.melbourne.vic.gov.au/ ">City of Melbourne open data</a>'
+            text: 'Source: <a href="http://www.data.vic.gov.au ">Victorian Government Data Directory</a>'
         },
         xAxis: {
             type: 'category',
