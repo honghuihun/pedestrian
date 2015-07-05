@@ -409,6 +409,9 @@
     {
        var className = $(this).attr('class');
 
+        $(this).attr('fill',"red");
+
+
        className =  className.replace(' ','');
         className =  className.replace(' ','');
         className =  className.replace('leaflet-clickable','');
@@ -417,15 +420,31 @@
         var chart = $('#container').highcharts(),
                 series = chart.get(className);
         series.graph.attr('stroke',"red");
+        series.graph.attr('stroke-width',5);
     });
+
+
+    var table = ['sensorId1','sensorId2','sensorId3','sensorId4','sensorId5','sensorId6','sensorId7','sensorId8','sensorId9','sensorId10',
+        'sensorId11','sensorId12','sensorId13','sensorId14','sensorId15','sensorId16','sensorId17','sensorId18','sensorId19','sensorId20',
+        'sensorId21','sensorId22','sensorId23','sensorId24','sensorId25','sensorId26','sensorId27','sensorId28','sensorId29','sensorId30',
+        'sensorId31','sensorId32','sensorId33','sensorId34','sensorId36','sensorId37','sensorId38','sensorId39','sensorId40','sensorId42',
+        'sensorId43','sensorId44'];
 
     $('.sensor').mouseout(function()
     {
-        var chart = $('#container').highcharts();
+
+        $('.sensor').attr('fill',"white");
+
+        for(var i=0; i<table.length;i++)
+        {
+            var className = table[i];
+            var chart = $('#container').highcharts(),
+                    series = chart.get(className);
+            series.graph.attr('stroke',"#cccccc");
+        }
 
 
-        series = chart.get(className);
-        series.graph.attr('stroke',"red");
+
     });
 
 
