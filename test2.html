@@ -50,6 +50,13 @@
                   marker:
                   {
                       enabled:false
+                  },
+                  point: {
+                      events: {
+                          mouseOver: function () {
+                              console.log(this);
+                          }
+                      }
                   }
               }
             },
