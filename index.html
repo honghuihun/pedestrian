@@ -1,89 +1,198 @@
+
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="">
+
+    <title>GovHack City Science - Home Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Retina.js - Load first for faster HQ mobile images. -->
+    <script src="js/plugins/retina/retina.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Default Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
+
+    <!-- Modern Style Fonts (Include these is you are using body.modern!) -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Vintage Style Fonts (Include these if you are using body.vintage!) -->
+    <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="css/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/jquery.fs.wallpaper.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/animate.css" rel="stylesheet" type="text/css">
+
+    <link id="changeable-colors" rel="stylesheet" href="css/template.css">
+    <link href="demo/style-switcher.css" rel="stylesheet">
+
+
+
+</head>
+
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <!-- Note: navbar-default and navbar-inverse are both supported with this theme. -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-expanded">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top" style="font-size: 30px;padding-top: 13px;">
+                    GovHack 2015
+                    <!-- <img src="img/creative/logo.png" class="img-responsive" alt=""> -->
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <!--<li>-->
+                        <!--<a class="page-scroll" href="#about">Ped Crash</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="page-scroll" href="#experience">Sensor</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="page-scroll" href="#skills">title3</a>-->
+                    <!--</li>-->
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <header style="background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('img/creative/bg-header.jpg')  no-repeat center center fixed; -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; ">
+        <div class="intro-content">
+            <!--<img src="img/creative/profile.png" class="img-responsive img-centered" alt="">-->
+            <div class="brand-name" style="font-size: 60px;">Mapping Pedestrian Activities and Safety in Melbourne</div>
+            <hr class="colored">
+            <div class="brand-name-subtext">Monash City Science</div>
+        </div>
+        <div class="scroll-down">
+            <a class="btn page-scroll" href="#about"><i class="fa fa-angle-down"></i></a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-6">
+                    <!--<img src="img/creative/about.jpg" class="img-responsive" alt="">-->
+                    <div id="bar-chart" style="width: 550px; height: 250px; margin: 0 auto"></div>
+                    <div><p style="font-size: 14px; margin-left: 45px;">The above diagram shows the distribution of pedestrian counts and crashes over 24-hour. The map on the right shows the individual pedestrian crashes as white dots. The coverage area of each pedestrian count sensor is shown as a square changing from yellow (low activity) to red (high activity).</p></div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div id="map" style="width: 550px; height: 350px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <p style="margin-top: 60px;margin-left: 140px;margin-right: 170px;">Melbourne is a sleepless city with more than 800,000 people moving around the city everyday. This number is estimated to increase to a million people by 2030. Walking accounts for 66% of the trips made in the city. Walking trips are also a major contributor to the economy, being the dominant mode for shopping and tourism. City of Melbourne has recently released a draft walking plan proposing ways to improve walking condition in the city as population grows.
+
+This project aims to analyse and visualise the relationship between number of pedestrian activities and pedestrian safety over time. Our goal is to contribute to the transport strategic plan of the City of Melbourne, specifically the Draft Walking Plan. The project provides further insights into the spatial and temporal distribution of pedestrian activities and crashes and help planners and decision-makers to make informed and data-driven decisions on pedestrian related policies in the city.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="bg-gray">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-6">
+                    <!--<img src="img/creative/about.jpg" class="img-responsive" alt="">-->
+                    <div id="sensor-chart" style="width: 550px; height: 300px; margin: 0 auto"></div>
+                    <div><p  style="font-size: 14px; margin-left: 45px;">The above diagram shows hourly median pedestrian counts in 2009-2013 for each sensor. The map on the right shows the individual pedestrian count sensors (total 42) across City of Melbourne.</p></div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div id="sensor-map" style="width: 550px; height: 350px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <p style="margin-top: 30px;margin-left: 140px;margin-right: 170px;">In the City of Melbourne, a pedestrian is involved in a fatal or serious injury crash every two days.  In 2009-2013, near 1,000 pedestrian crashes were reported in the city, which is the highest number of pedestrian crashes in the state of Victoria. Improving the safety and security of the walking environment in the city increases the number of pedestrian activities and therefore contributes to the economy and well-being of the society.
+
+We used a number of open datasets to deliver this project. We used 5-years worth of pedestrian count data (2009-2013) from City of Melbourne Open Data Portal  containing more than 1.1 million rows combined with 5-years worth of pedestrian crash data (2009-2013) extracted from Victorian Government Data Directory.
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="services" >
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-6">
+                    <!--<img src="img/creative/about.jpg" class="img-responsive" alt="">-->
+                    <div style="width: 350px; height: 300px; margin: 0 auto; margin-left: 150px;"><p>The chart on the right shows the correlation between the number of pedestrian crashes (sum value over 2009-2013) and hourly pedestrian counts (median value over 2009-2013) across City of Melbourne. Each dot represents one hour in a day. The observed linear relationship suggests that if the number of pedestrian activities increases, the number of crashes is likely to increase.</p></div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div style="width: 350px; height: 350px">
+                        <img style="width: 400px; height: 350px" src="img/creative/Median & Crash count.png"></img>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p class="text-center" style="font-size: 14px;margin-top: 100px;">Developed by Monash City Science team: Meead Saberi, Bryan Hong, Julian Li, Emily Chen, and Sajjad Shafiei</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Plugin Scripts -->
+    <script src="js/plugins/jquery.easing.min.js"></script>
+    <script src="js/plugins/classie.js"></script>
+    <script src="js/plugins/cbpAnimatedHeader.js"></script>
+    <script src="js/plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins/jquery.fs.wallpaper.js"></script>
+    <script src="js/plugins/jquery.mixitup.js"></script>
+    <script src="js/plugins/wow/wow.min.js"></script>
+    <!--<script src="js/contact_me.js"></script>-->
+    <script src="js/plugins/jqBootstrapValidation.js"></script>
+    <script src="js/template.js"></script>
+    <!--<script src="demo/style.switcher.js"></script>-->
+
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
     <script src="js/crash_geojson.js"></script>
-    <title></title>
-</head>
-<style type="text/css">
-    .story-header {
-        padding-bottom: 0;
-        border-bottom: none;
-        margin-bottom: 0;
-        position: relative;
-        font-family: Verdana, sans-serif;
-        text-align:center;
-    }
-    body{
-        font-family: nyt-franklin, Arial, sans-serif;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: normal;
-        font-stretch: normal;
-        line-height: 1.3;
-        text-align:justify;
-    }
-    .interactive-headline{
-        margin-bottom: 50px !important;
-        font: 300 38px/1.15 nyt-franklin, Arial, sans-serif !important;
-        font-family: nyt-franklin, Arial, sans-serif;
-        font-size: 38px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 300;
-        font-stretch: normal;
-        line-height: 1.15;
-    }
-
-
-</style>
-<body>
-<header class="story-header interactive-header">
-    <div>
-        <h1 class="interactive-headline">Mapping Pedestrian Activities & Safety in City of Melbourne</h1>
-    </div>
-</header>
-
-   <div id="wrapper">
-       <div class=container style="display: flex; width: 1250px;">
-           <div class="left-side" style="width: 600px; height: 400px; margin: 0 auto;">
-                <div id="bar-chart" style="width: 600px; height: 250px; margin: 0 auto"></div>
-               <div><p>Project entry for GovHack 2015
-
-Developed by Monash City Science team: Meead Saberi, Bryan Hong, Julian Li, Emily Chen, and Sajjad Shafiei</p></div>
-           </div>
-
-           <div class="right-side" style="width: 600px; height: 400px; margin: 0 auto;">
-               <div id="map" style="width: 600px; height: 400px"></div>
-           </div>
-       </div>
-        <div style="width: 1220px; margin: 0 auto;"><p>Melbourne is a sleepless city with more than 800,000 people moving around the city everyday. This number is estimated to increase to a million people by 2030. Walking accounts for 66% of the trips made in the city. Walking trips are also a major contributor to the economy, being the dominant mode for shopping and tourism. City of Melbourne has recently released a draft walking plan proposing ways to improve walking condition in the city as population grows.
-
-This project aims to analyse and visualise the relationship between number of pedestrian activities and pedestrian safety over time. Our goal is to contribute to the transport strategic plan of the City of Melbourne, specifically the Draft Walking Plan. The project provides further insights into the spatial and temporal distribution of pedestrian activities and crashes and help planners and decision-makers to make informed and data-driven decisions on pedestrian related policies in the city.</p></div>
-       <div class=container style="display: flex; width: 1250px;">
-           <div class="left-side" style="width: 600px; height: 400px; margin: 0 auto;">
-                <div id="sensor-chart" style="width: 600px; height: 350px; margin: 0 auto"></div>
-           </div>
-
-           <div class="right-side" style="width: 600px; height: 400px; margin: 0 auto;">
-               <div id="sensor-map" style="width: 600px; height: 400px"></div>
-           </div>
-       </div>
-        <div style="width: 1220px; margin: 0 auto;"><p>In the City of Melbourne, a pedestrian is involved in a fatal or serious injury crash every two days.  In 2009-2013, near 1,000 pedestrian crashes were reported in the city, which is the highest number of pedestrian crashes in the state of Victoria. Improving the safety and security of the walking environment in the city increases the number of pedestrian activities and therefore contributes to the economy and well-being of the society.
-
-We used a number of open datasets to deliver this project. We used 5-years worth of pedestrian count data (2009-2013) from City of Melbourne Open Data Portal  containing more than 1.1 million rows combined with 5-years worth of pedestrian crash data (2009-2013) extracted from Victorian Government Data Directory.</p></div>
-   </div>
-
-
-   <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
-   <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-   <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
-   <script src="js/buffer.js"></script>
-   <script src="js/create_map.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+    <script src="js/buffer.js"></script>
+    <script src="js/create_map.js"></script>
 
     <script src="json/ped_sensor.json"></script>
     <script src="js/sensor_geojson.js"></script>
@@ -407,16 +516,19 @@ $(function () {
 <script>
     $(function () {
         var chart =  $('#sensor-chart').highcharts({
+            chart: {
+                 backgroundColor: '#f5f5f5'
+            },
             credits:
             {
               enabled:false
             },
             title: {
-                text: 'Monthly Average Temperature',
+                text: 'Hourly Median Pedstrain Count',
                 x: -20 //center
             },
             subtitle: {
-                text: 'Source: WorldClimate.com',
+                text: 'Source: <a href="https://data.melbourne.vic.gov.au/">City of Melbourne open data portal</a>',
                 x: -20
             },
             xAxis: {
@@ -828,5 +940,8 @@ $(function () {
 
 
 </script>
+
+
 </body>
+
 </html>
